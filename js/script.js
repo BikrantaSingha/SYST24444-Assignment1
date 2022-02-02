@@ -44,7 +44,7 @@ $(document).ready(() => {
 	//each can covers 400sq ft
 	let cansNumber = () => {
 		//rounding up
-		return Math.ceil(squareFootage / paintCanCoverage);
+		return Math.ceil(squareFootage() / paintCanCoverage);
 	};
 
 	//calculates the final quote inclucing 13% HST
@@ -59,12 +59,21 @@ $(document).ready(() => {
 
 	//display quotation page info
 	let displayQuote = () => {
-		document.getElementById("quote-customer-info").text("Quote for " + localStorage.customerName + ". Email: " + localStorage.customerEmail);
-		document.getElementById("quote-room").text(localStorage.roomType);
-		document.getElementById("square-footage").text(squareFootage());
-		document.getElementById("paint-color").text(localStorage.roomColor);
+		$("#content").html(
+			'<div class="content">' + 
+			'<h3>Paint Quote</h3>' + 
+			'<p id="quote-customer-info"> For ' + localStorage.customerName + 
+			' and email: ' + localStorage.customerEmail + '</p>' +
+			'<p id="quote-room">' + localStorage.roomType + '</p>' +
+			'<p id="square-footage">' + squareFootage() + 'sq. ft</p>' + 
+			'<p id="'+ localStorage.roomColor+'">' + localStorage.roomColor+'</p>' +
+			'<p id="quote-cans">Total number of paint cans: '+ cansNumber() +'</p>' +
+			'<p id="quote-final-price">Final quote price(including 13% HST): ' + calculateQuote + '</p>' +
+			'</div>'
 
-	}
+			);
+
+	};
 
 
 })
