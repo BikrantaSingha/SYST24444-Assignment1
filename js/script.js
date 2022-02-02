@@ -6,6 +6,7 @@ $(document).ready(() => {
 	const taxRate = 1.13; //13% HST 
 	const standardPrice = 24.99;
 	const premiumPrice = 39.99;
+	const significantDigits = 2; // will be used to round up the final quote
 
 
 	$("#main-form").submit(() => {
@@ -50,9 +51,9 @@ $(document).ready(() => {
 	//calculates the final quote inclucing 13% HST
 	let calculateQuote = () => {
 		if(localStorage.paintType == "standard") {
-			return cansNumber() * standardPrice * taxRate;
+			return (cansNumber() * standardPrice * taxRate).toFixed(significantDigits);
 		} else {
-			return cansNumber() * premiumPrice * taxRate;
+			return (cansNumber() * premiumPrice * taxRate).toFixed(significantDigits);
 		}
 	};
 
@@ -63,12 +64,12 @@ $(document).ready(() => {
 			'<div class="content">' + 
 			'<h3>Paint Quote</h3>' + 
 			'<p id="quote-customer-info"> For ' + localStorage.customerName + 
-			' and email: ' + localStorage.customerEmail + '</p>' +
+			' with email: ' + localStorage.customerEmail + '</p>' +
 			'<p id="quote-room">' + localStorage.roomType + '</p>' +
 			'<p id="square-footage">' + squareFootage() + 'sq. ft</p>' + 
 			'<p id="'+ localStorage.roomColor+'">' + localStorage.roomColor+'</p>' +
 			'<p id="quote-cans">Total number of paint cans: '+ cansNumber() +'</p>' +
-			'<p id="quote-final-price">Final quote price(including 13% HST): ' + calculateQuote + '</p>' +
+			'<p id="quote-final-price">Final quote price(including 13% HST): $' + calculateQuote() + '</p>' +
 			'</div>'
 
 			);
