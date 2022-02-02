@@ -62,6 +62,7 @@ $(document).ready(() => {
 		document.getElementById("quote-customer-info").text("Quote for " + localStorage.customerName + ". Email: " + localStorage.customerEmail);
 		document.getElementById("quote-room").text(localStorage.roomType);
 		document.getElementById("square-footage").text(squareFootage());
+		document.getElementById("paint-color").text(localStorage.roomColor);
 
 	}
 
