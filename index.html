@@ -1,4 +1,4 @@
-!<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
@@ -17,11 +17,49 @@
 			<p>Assignment #1 / Bikranta Singha / 991546415</p>
 		</header>
 
+		<div class="content">
+			<form id="main-form" action="quotation.html">
+				<label for="customer-name">Name: </label>
+				<input type="text" id="customer-name" name="customer-name" placeholder="Required" required><br>
+				<label for="customer-email">Email: </label>
+				<input type="text" id="customer-email" name="customer-name" placeholder="Required" required><br>
+				<label for="room-type">Room: </label>
+				<select id="room-type" name="room-type" form="main-form">
+					<option value="living-room">Living Room</option>
+					<option value="family-room">Family Room</option>
+					<option value="bedroom">Bedroom</option>
+				</select><br>
+				<label for="room-width">Room width: </label>
+				<input type="text" id="room-width" name="room-width" placeholder="Required" required><br>
+				<label for="room-length">Room length: </label>
+				<input type="text" id="room-length" name="room-length" placeholder="Required" required><br>
+				<label for="room-color">Room color: </label>
+				<select id="room-color" name="room-color" form="main-form">
+					<option value="pink">Pink</option>
+					<option value="cyan">Cyan</option>
+					<option value="lime-green">Lime Green</option>
+					<option value="orange">Orange</option>
+					<option value="biege">Biege</option>
+				</select><br>
+				<label for="paint-type">Paint type: </label>
+				<select id="paint-type" name="paint-type" form="main-form">
+					<option value="standard">Standard - $24.99 per can</option>
+					<option value="premium">Premium - $39.99 per can</option>
+				</select><br>
+
+				<input type="button" value="Save" id="main-form-save">
+				<input type="submit" value="Submit">
+			</form>
+		</div>
+
 		<footer>
 			singhabi / Davis Campus
 		</footer>
 	</div>
 
-	<script src="js/script.js" ></script>
+
+    <!--All js goes here-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="js/script.js"></script>
 </body>
 </html>
