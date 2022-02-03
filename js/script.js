@@ -67,7 +67,7 @@ $(document).ready(() => {
 			' with email: ' + localStorage.customerEmail + '</p>' +
 			'<p id="quote-room">' + localStorage.roomType + '</p>' +
 			'<p id="square-footage">' + squareFootage() + 'sq. ft</p>' + 
-			'<p id="color-box '+ localStorage.roomColor+'">' + localStorage.roomColor+'</p>' +
+			'<div id="color-box '+ localStorage.roomColor+'">' + localStorage.roomColor+'</div>' +
 			'<p id="quote-cans">Total number of paint cans: '+ cansNumber() +'</p>' +
 			'<p id="quote-final-price">Final quote price(including 13% HST): $' + calculateQuote() + '</p>' +
 			'</div>'

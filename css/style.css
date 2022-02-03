@@ -13,7 +13,9 @@ html, body {
 .grid-container {
 	display: grid;
 	grid-template-columns: 100%;
-	grid-template-rows:  1fr 3fr 1fr;
+	grid-template-rows:  1fr 3fr 2fr;
+	background:  rgba(210, 215, 211, 0.6);
+	min-height:  800px;
 }
 
 #color-box {
@@ -22,7 +24,23 @@ html, body {
 }
 
 #pink{
-	background-color: pink;
+	background-color: #FF69B4;
+}
+
+#lime-green{
+	background-color: #32CD32;
+}
+
+#orange{
+	background-color: #FFA500;
+}
+
+#cyan{
+	background-color: #00FFFF;
+}
+
+#biege{
+	background-color: #F5F5DC;
 }
 
 
