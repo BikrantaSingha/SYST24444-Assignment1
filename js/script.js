@@ -62,12 +62,12 @@ $(document).ready(() => {
 	let displayQuote = () => {
 		$("#content").html(
 			'<div class="content">' + 
-			'<h3>Paint Quote</h3>' + 
+			'<h3>Quotation Page</h3>' + 
 			'<p id="quote-customer-info"> For ' + localStorage.customerName + 
 			' with email: ' + localStorage.customerEmail + '</p>' +
 			'<p id="quote-room">' + localStorage.roomType + '</p>' +
 			'<p id="square-footage">' + squareFootage() + 'sq. ft</p>' + 
-			'<p id="'+ localStorage.roomColor+'">' + localStorage.roomColor+'</p>' +
+			'<p id="color-box '+ localStorage.roomColor+'">' + localStorage.roomColor+'</p>' +
 			'<p id="quote-cans">Total number of paint cans: '+ cansNumber() +'</p>' +
 			'<p id="quote-final-price">Final quote price(including 13% HST): $' + calculateQuote() + '</p>' +
 			'</div>'
